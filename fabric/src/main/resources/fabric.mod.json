@@ -3,7 +3,7 @@
 	"id": "vs_sails",
 	"version": "${mod_version}",
 	"name": "${mod_name}",
-	"description": "{$mod_description}",
+	"description": "${mod_description}",
 	"authors": [
 		"Quinton Center"
 	],

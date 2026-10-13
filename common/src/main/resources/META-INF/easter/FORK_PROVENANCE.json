@@ -1,0 +1,13 @@
+{
+  "brand": "Easter Sails",
+  "upstream": "https://github.com/Verquinox/valkyrien-sails",
+  "upstream_branch": "master",
+  "upstream_commit": "08e8dbcc27a2aaa7db95e37c85e0e68e941154b6",
+  "license": "LGPL-3.0",
+  "license_sha256": "a5681bf9b05db14d86776930017c647ad9e6e56ff6bbcfdf21e5848288dfaf1b",
+  "technical_mod_id": "vs_sails",
+  "baseline_minecraft": "1.20.1",
+  "target_minecraft": "26.2",
+  "runtime_status": "experimental-source-foundation-not-deployed",
+  "shippy_status": "retained-separate-unmodified-dependency"
+}
