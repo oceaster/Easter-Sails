@@ -39,6 +39,14 @@ public class DedicationBottle extends Item {
 
         if (!context.getLevel().isClientSide()) {
             if (!VSGameUtilsKt.isBlockInShipyard(context.getLevel(), context.getClickedPos())) {
+                // Refuse new player-built physics hulls before consuming the bottle or changing blocks.
+                // This does not gate boarding, piloting, storage or damage on existing ships.
+                if (context.getPlayer() == null || !context.getPlayer().hasPermissions(2)) {
+                    if (context.getPlayer() != null) context.getPlayer().displayClientMessage(
+                            net.minecraft.network.chat.Component.literal(
+                                    "Large ships are capture-only. Board an NPC pirate ship from your Shippy boat."), true);
+                    return InteractionResult.FAIL;
+                }
                 Objects.requireNonNull(context.getPlayer()).getItemInHand(context.getHand()).shrink(1);
                 ServerLevel serverLevel = (ServerLevel) context.getLevel();
 
